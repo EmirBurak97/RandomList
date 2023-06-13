@@ -1,5 +1,7 @@
-﻿using RandomList.Business.Abstract;
+﻿using Ninject.Infrastructure.Language;
+using RandomList.Business.Abstract;
 using RandomList.DataAccess.Abstract;
+using RandomList.DataAccess.Concrete.EntityFramewoek;
 using RandomList.Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -21,6 +23,18 @@ namespace RandomList.Business.Concrete
         public void Add(Lol lol)
         {
             _lolDal.Add(lol);
+        }
+
+        public void AddUnique(Lol lol)
+        {
+            using(ListsContext context = new ListsContext()) 
+            {
+                var nameControl = context.Lol.Any(x => x.CharacterName == lol.CharacterName);
+                if (nameControl==false)
+                {
+                    _lolDal.Add(lol);
+                }
+            }
         }
 
         public void Delete(Lol lol)

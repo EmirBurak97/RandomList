@@ -36,6 +36,7 @@
             lblAddChamp = new Label();
             dgwLolChamps = new DataGridView();
             gbxMusic = new GroupBox();
+            btnRndLol = new Button();
             gbxLol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwLolChamps).BeginInit();
             SuspendLayout();
@@ -44,7 +45,7 @@
             // 
             gbxAssetto.Location = new Point(12, 12);
             gbxAssetto.Name = "gbxAssetto";
-            gbxAssetto.Size = new Size(391, 619);
+            gbxAssetto.Size = new Size(391, 597);
             gbxAssetto.TabIndex = 0;
             gbxAssetto.TabStop = false;
             gbxAssetto.Text = "Assetto Corsa";
@@ -58,14 +59,14 @@
             gbxLol.Controls.Add(dgwLolChamps);
             gbxLol.Location = new Point(409, 12);
             gbxLol.Name = "gbxLol";
-            gbxLol.Size = new Size(391, 619);
+            gbxLol.Size = new Size(391, 597);
             gbxLol.TabIndex = 1;
             gbxLol.TabStop = false;
             gbxLol.Text = "League Of Legends";
             // 
             // btnDeleteChamp
             // 
-            btnDeleteChamp.Location = new Point(6, 571);
+            btnDeleteChamp.Location = new Point(6, 547);
             btnDeleteChamp.Name = "btnDeleteChamp";
             btnDeleteChamp.Size = new Size(379, 42);
             btnDeleteChamp.TabIndex = 4;
@@ -75,9 +76,9 @@
             // 
             // btnAddChamp
             // 
-            btnAddChamp.Location = new Point(317, 33);
+            btnAddChamp.Location = new Point(317, 24);
             btnAddChamp.Name = "btnAddChamp";
-            btnAddChamp.Size = new Size(68, 44);
+            btnAddChamp.Size = new Size(68, 29);
             btnAddChamp.TabIndex = 3;
             btnAddChamp.Text = "Add";
             btnAddChamp.UseVisualStyleBackColor = true;
@@ -87,7 +88,7 @@
             // 
             cbxChamps.FormattingEnabled = true;
             cbxChamps.Items.AddRange(new object[] { "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie", "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Bel'Veth", "Blitzcrank", "Brand", "Braum", "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", "Corki", "Darius", "Diana", "Dr. Mundo", "Draven", "Ekko", "Elise", "Evelynn", "Ezreal", "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", "Gnar", "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Illaoi", "Irelia", "Ivern", "Janna", "Jarvan IV", "Jax", "Jayce", "Jhin", "Jinx", "K'Sante", "Kai'Sa", "Kalista", "Karma", "Karthus", "Kassadin", "Katarina", "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", "Kled", "Kog'Maw", "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra", "Lucian", "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "Master Yi", "Miss Fortune", "Mordekaiser", "Morgana", "Nami", "Nasus", "Nautilus", "Neeko", "Nidalee", "Nilah", "Nocturne", "Nunu ve Willump", "Olaf", "Orianna", "Ornn", "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai", "Rell", "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Samira", "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Sivir", "Skarner", "Sona", "Soraka", "Swain", "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon", "Taric", "Teemo", "Thresh", "Tristana", "Trundle", "Tryndamare", "Twisted Fate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", "Viktor", "Vladimir", "Volibear", "Warwick", "Wukong", "Xayah", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", "Yuumi", "Zac", "Zed", "Zeri", "Ziggs", "Zilean", "Zoe", "Zyra", "", "", "" });
-            cbxChamps.Location = new Point(127, 45);
+            cbxChamps.Location = new Point(127, 28);
             cbxChamps.Name = "cbxChamps";
             cbxChamps.Size = new Size(165, 23);
             cbxChamps.TabIndex = 2;
@@ -95,7 +96,7 @@
             // lblAddChamp
             // 
             lblAddChamp.AutoSize = true;
-            lblAddChamp.Location = new Point(15, 48);
+            lblAddChamp.Location = new Point(15, 31);
             lblAddChamp.Name = "lblAddChamp";
             lblAddChamp.Size = new Size(106, 15);
             lblAddChamp.TabIndex = 1;
@@ -104,7 +105,7 @@
             // dgwLolChamps
             // 
             dgwLolChamps.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgwLolChamps.Location = new Point(6, 83);
+            dgwLolChamps.Location = new Point(6, 59);
             dgwLolChamps.Name = "dgwLolChamps";
             dgwLolChamps.RowTemplate.Height = 25;
             dgwLolChamps.Size = new Size(379, 482);
@@ -114,16 +115,27 @@
             // 
             gbxMusic.Location = new Point(806, 12);
             gbxMusic.Name = "gbxMusic";
-            gbxMusic.Size = new Size(391, 619);
+            gbxMusic.Size = new Size(391, 597);
             gbxMusic.TabIndex = 1;
             gbxMusic.TabStop = false;
             gbxMusic.Text = "Musics";
+            // 
+            // btnRndLol
+            // 
+            btnRndLol.Location = new Point(409, 615);
+            btnRndLol.Name = "btnRndLol";
+            btnRndLol.Size = new Size(385, 28);
+            btnRndLol.TabIndex = 2;
+            btnRndLol.Text = "Random Lol Champ";
+            btnRndLol.UseVisualStyleBackColor = true;
+            btnRndLol.Click += btnRndLol_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1208, 643);
+            ClientSize = new Size(1208, 655);
+            Controls.Add(btnRndLol);
             Controls.Add(gbxMusic);
             Controls.Add(gbxLol);
             Controls.Add(gbxAssetto);
@@ -146,5 +158,6 @@
         private ComboBox cbxChamps;
         private Label lblAddChamp;
         private DataGridView dgwLolChamps;
+        private Button btnRndLol;
     }
 }

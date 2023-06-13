@@ -10,6 +10,7 @@ namespace RandomList.Business.Abstract
     public interface ILolService
     {
         void Add(Lol lol);
+        void AddUnique(Lol lol);
         void Delete(Lol lol);
         List<Lol> GetAll();
     }

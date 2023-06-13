@@ -1,4 +1,5 @@
-﻿using RandomList.Entities.Concrete;
+﻿using RandomList.DataAccess.Concrete.EntityFramewoek;
+using RandomList.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,5 @@ namespace RandomList.DataAccess.Abstract
 {
     public interface ILolDal : IEntityRepository<Lol>
     {
-
     }
 }
