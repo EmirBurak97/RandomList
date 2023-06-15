@@ -13,9 +13,12 @@ namespace RandomList.DataAccess.Concrete.EntityFramewoek
     {
         public DbSet<Lol> Lol { get; set; }
 
+        public DbSet<Valo> Valo { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new LolMap());
+            modelBuilder.Configurations.Add(new ValoMap());
         }
     }
 }

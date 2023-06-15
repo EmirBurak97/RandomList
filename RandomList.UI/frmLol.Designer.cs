@@ -1,14 +1,14 @@
 ﻿namespace RandomList.UI
 {
-    partial class Form1
+    partial class frmLol
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,32 +23,32 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            gbxAssetto = new GroupBox();
+            btnRndLol = new Button();
             gbxLol = new GroupBox();
             btnDeleteChamp = new Button();
             btnAddChamp = new Button();
             cbxChamps = new ComboBox();
             lblAddChamp = new Label();
             dgwLolChamps = new DataGridView();
-            gbxMusic = new GroupBox();
-            btnRndLol = new Button();
+            lbxRndChampList = new ListBox();
             gbxLol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwLolChamps).BeginInit();
             SuspendLayout();
             // 
-            // gbxAssetto
+            // btnRndLol
             // 
-            gbxAssetto.Location = new Point(12, 12);
-            gbxAssetto.Name = "gbxAssetto";
-            gbxAssetto.Size = new Size(391, 597);
-            gbxAssetto.TabIndex = 0;
-            gbxAssetto.TabStop = false;
-            gbxAssetto.Text = "Assetto Corsa";
+            btnRndLol.Location = new Point(409, 71);
+            btnRndLol.Name = "btnRndLol";
+            btnRndLol.Size = new Size(385, 482);
+            btnRndLol.TabIndex = 7;
+            btnRndLol.Text = "Random Lol Champ";
+            btnRndLol.UseVisualStyleBackColor = true;
+            btnRndLol.Click += btnRndLol_Click;
             // 
             // gbxLol
             // 
@@ -57,10 +57,10 @@
             gbxLol.Controls.Add(cbxChamps);
             gbxLol.Controls.Add(lblAddChamp);
             gbxLol.Controls.Add(dgwLolChamps);
-            gbxLol.Location = new Point(409, 12);
+            gbxLol.Location = new Point(12, 12);
             gbxLol.Name = "gbxLol";
             gbxLol.Size = new Size(391, 597);
-            gbxLol.TabIndex = 1;
+            gbxLol.TabIndex = 6;
             gbxLol.TabStop = false;
             gbxLol.Text = "League Of Legends";
             // 
@@ -111,37 +111,27 @@
             dgwLolChamps.Size = new Size(379, 482);
             dgwLolChamps.TabIndex = 0;
             // 
-            // gbxMusic
+            // lbxRndChampList
             // 
-            gbxMusic.Location = new Point(806, 12);
-            gbxMusic.Name = "gbxMusic";
-            gbxMusic.Size = new Size(391, 597);
-            gbxMusic.TabIndex = 1;
-            gbxMusic.TabStop = false;
-            gbxMusic.Text = "Musics";
+            lbxRndChampList.FormattingEnabled = true;
+            lbxRndChampList.ItemHeight = 15;
+            lbxRndChampList.Location = new Point(800, 75);
+            lbxRndChampList.Name = "lbxRndChampList";
+            lbxRndChampList.Size = new Size(323, 484);
+            lbxRndChampList.TabIndex = 8;
             // 
-            // btnRndLol
-            // 
-            btnRndLol.Location = new Point(409, 615);
-            btnRndLol.Name = "btnRndLol";
-            btnRndLol.Size = new Size(385, 28);
-            btnRndLol.TabIndex = 2;
-            btnRndLol.Text = "Random Lol Champ";
-            btnRndLol.UseVisualStyleBackColor = true;
-            btnRndLol.Click += btnRndLol_Click;
-            // 
-            // Form1
+            // frmLol
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1208, 655);
+            ClientSize = new Size(1135, 626);
+            Controls.Add(lbxRndChampList);
             Controls.Add(btnRndLol);
-            Controls.Add(gbxMusic);
             Controls.Add(gbxLol);
-            Controls.Add(gbxAssetto);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
+            Name = "frmLol";
+            Text = "frmLol";
+            FormClosing += frmLol_FormClosing;
+            Load += frmLol_Load;
             gbxLol.ResumeLayout(false);
             gbxLol.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgwLolChamps).EndInit();
@@ -149,15 +139,13 @@
         }
 
         #endregion
-
-        private GroupBox gbxAssetto;
+        private Button btnRndLol;
         private GroupBox gbxLol;
-        private GroupBox gbxMusic;
         private Button btnDeleteChamp;
         private Button btnAddChamp;
         private ComboBox cbxChamps;
         private Label lblAddChamp;
         private DataGridView dgwLolChamps;
-        private Button btnRndLol;
+        private ListBox lbxRndChampList;
     }
 }
