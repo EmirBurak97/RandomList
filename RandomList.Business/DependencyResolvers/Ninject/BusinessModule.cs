@@ -22,6 +22,9 @@ namespace RandomList.Business.DependencyResolvers.Ninject
 
             Bind<IValoService>().To<ValoManager>().InSingletonScope();
             Bind<IValoDal>().To<EfValoDal>().InSingletonScope();
+
+            Bind<IMusicService>().To<MusicManager>().InSingletonScope();
+            Bind<IMusicDal>().To<EfMusicDal>().InSingletonScope();
         }
     }
 }

@@ -31,7 +31,7 @@ namespace RandomList.UI
             int rowControl = dgwLolChamps.RowCount;
             _lolService.AddUnique(new Lol
             {
-                CharacterName = cbxChamps.Text
+                CharacterName = tbxChamp.Text
             });
             LoadLol();
             if (rowControl == dgwLolChamps.RowCount)

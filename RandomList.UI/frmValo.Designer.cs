@@ -31,20 +31,20 @@
             gbxChars = new GroupBox();
             btnDeleteChar = new Button();
             btnAddChar = new Button();
-            cbxChars = new ComboBox();
             lblAddChar = new Label();
             dgwChars = new DataGridView();
             lbxRndValoCharList = new ListBox();
             btnRndValo = new Button();
+            tbxValoChar = new TextBox();
             gbxChars.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwChars).BeginInit();
             SuspendLayout();
             // 
             // gbxChars
             // 
+            gbxChars.Controls.Add(tbxValoChar);
             gbxChars.Controls.Add(btnDeleteChar);
             gbxChars.Controls.Add(btnAddChar);
-            gbxChars.Controls.Add(cbxChars);
             gbxChars.Controls.Add(lblAddChar);
             gbxChars.Controls.Add(dgwChars);
             gbxChars.Location = new Point(12, 12);
@@ -73,15 +73,6 @@
             btnAddChar.Text = "Add";
             btnAddChar.UseVisualStyleBackColor = true;
             btnAddChar.Click += btnAddChar_Click;
-            // 
-            // cbxChars
-            // 
-            cbxChars.FormattingEnabled = true;
-            cbxChars.Items.AddRange(new object[] { "Jett", "Raze", "Breach", "Omen", "Brimstone", "Phoenix", "Sage", "Sova", "Viper", "Cypher", "Reyna", "Killjoy", "Skye", "Yoru", "Astra", "Kayo", "Chamber", "Neon", "Fade", "Harbor", "Gekko" });
-            cbxChars.Location = new Point(127, 28);
-            cbxChars.Name = "cbxChars";
-            cbxChars.Size = new Size(165, 23);
-            cbxChars.TabIndex = 2;
             // 
             // lblAddChar
             // 
@@ -120,6 +111,13 @@
             btnRndValo.UseVisualStyleBackColor = true;
             btnRndValo.Click += btnRndValo_Click;
             // 
+            // tbxValoChar
+            // 
+            tbxValoChar.Location = new Point(96, 28);
+            tbxValoChar.Name = "tbxValoChar";
+            tbxValoChar.Size = new Size(191, 23);
+            tbxValoChar.TabIndex = 5;
+            // 
             // frmValo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -143,10 +141,10 @@
         private GroupBox gbxChars;
         private Button btnDeleteChar;
         private Button btnAddChar;
-        private ComboBox cbxChars;
         private Label lblAddChar;
         private DataGridView dgwChars;
         private ListBox lbxRndValoCharList;
         private Button btnRndValo;
+        private TextBox tbxValoChar;
     }
 }

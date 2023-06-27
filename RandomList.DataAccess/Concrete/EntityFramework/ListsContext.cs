@@ -15,10 +15,13 @@ namespace RandomList.DataAccess.Concrete.EntityFramewoek
 
         public DbSet<Valo> Valo { get; set; }
 
+        public DbSet<Music> Music { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new LolMap());
             modelBuilder.Configurations.Add(new ValoMap());
+            modelBuilder.Configurations.Add(new MusicMap());
         }
     }
 }

@@ -38,7 +38,7 @@ namespace RandomList.UI
             int rowControl = dgwChars.RowCount;
             _valoService.AddUnique(new Valo
             {
-                ValoName = cbxChars.Text
+                ValoName = tbxValoChar.Text
             });
             LoadValo();
             if (rowControl == dgwChars.RowCount)

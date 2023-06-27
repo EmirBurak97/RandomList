@@ -32,10 +32,10 @@
             gbxLol = new GroupBox();
             btnDeleteChamp = new Button();
             btnAddChamp = new Button();
-            cbxChamps = new ComboBox();
             lblAddChamp = new Label();
             dgwLolChamps = new DataGridView();
             lbxRndChampList = new ListBox();
+            tbxChamp = new TextBox();
             gbxLol.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwLolChamps).BeginInit();
             SuspendLayout();
@@ -52,9 +52,9 @@
             // 
             // gbxLol
             // 
+            gbxLol.Controls.Add(tbxChamp);
             gbxLol.Controls.Add(btnDeleteChamp);
             gbxLol.Controls.Add(btnAddChamp);
-            gbxLol.Controls.Add(cbxChamps);
             gbxLol.Controls.Add(lblAddChamp);
             gbxLol.Controls.Add(dgwLolChamps);
             gbxLol.Location = new Point(12, 12);
@@ -84,15 +84,6 @@
             btnAddChamp.UseVisualStyleBackColor = true;
             btnAddChamp.Click += btnAddChamp_Click;
             // 
-            // cbxChamps
-            // 
-            cbxChamps.FormattingEnabled = true;
-            cbxChamps.Items.AddRange(new object[] { "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie", "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Bel'Veth", "Blitzcrank", "Brand", "Braum", "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", "Corki", "Darius", "Diana", "Dr. Mundo", "Draven", "Ekko", "Elise", "Evelynn", "Ezreal", "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", "Gnar", "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Illaoi", "Irelia", "Ivern", "Janna", "Jarvan IV", "Jax", "Jayce", "Jhin", "Jinx", "K'Sante", "Kai'Sa", "Kalista", "Karma", "Karthus", "Kassadin", "Katarina", "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", "Kled", "Kog'Maw", "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra", "Lucian", "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "Master Yi", "Miss Fortune", "Mordekaiser", "Morgana", "Nami", "Nasus", "Nautilus", "Neeko", "Nidalee", "Nilah", "Nocturne", "Nunu ve Willump", "Olaf", "Orianna", "Ornn", "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai", "Rell", "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Samira", "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Sivir", "Skarner", "Sona", "Soraka", "Swain", "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon", "Taric", "Teemo", "Thresh", "Tristana", "Trundle", "Tryndamare", "Twisted Fate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", "Viktor", "Vladimir", "Volibear", "Warwick", "Wukong", "Xayah", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", "Yuumi", "Zac", "Zed", "Zeri", "Ziggs", "Zilean", "Zoe", "Zyra", "", "", "" });
-            cbxChamps.Location = new Point(127, 28);
-            cbxChamps.Name = "cbxChamps";
-            cbxChamps.Size = new Size(165, 23);
-            cbxChamps.TabIndex = 2;
-            // 
             // lblAddChamp
             // 
             lblAddChamp.AutoSize = true;
@@ -120,6 +111,13 @@
             lbxRndChampList.Size = new Size(323, 484);
             lbxRndChampList.TabIndex = 8;
             // 
+            // tbxChamp
+            // 
+            tbxChamp.Location = new Point(127, 28);
+            tbxChamp.Name = "tbxChamp";
+            tbxChamp.Size = new Size(163, 23);
+            tbxChamp.TabIndex = 5;
+            // 
             // frmLol
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -143,9 +141,9 @@
         private GroupBox gbxLol;
         private Button btnDeleteChamp;
         private Button btnAddChamp;
-        private ComboBox cbxChamps;
         private Label lblAddChamp;
         private DataGridView dgwLolChamps;
         private ListBox lbxRndChampList;
+        private TextBox tbxChamp;
     }
 }

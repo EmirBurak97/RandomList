@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             gbxMusic = new GroupBox();
+            tbxMusic = new TextBox();
             btnDeleteMusic = new Button();
             btnAddMusic = new Button();
-            cbxMusics = new ComboBox();
             lblAddMusic = new Label();
             dgwMusics = new DataGridView();
+            lbxRndMusicList = new ListBox();
+            btnRndMusic = new Button();
             gbxMusic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwMusics).BeginInit();
             SuspendLayout();
             // 
             // gbxMusic
             // 
+            gbxMusic.Controls.Add(tbxMusic);
             gbxMusic.Controls.Add(btnDeleteMusic);
             gbxMusic.Controls.Add(btnAddMusic);
-            gbxMusic.Controls.Add(cbxMusics);
             gbxMusic.Controls.Add(lblAddMusic);
             gbxMusic.Controls.Add(dgwMusics);
             gbxMusic.Location = new Point(12, 12);
@@ -52,6 +54,13 @@
             gbxMusic.TabStop = false;
             gbxMusic.Text = "Music";
             // 
+            // tbxMusic
+            // 
+            tbxMusic.Location = new Point(103, 28);
+            tbxMusic.Name = "tbxMusic";
+            tbxMusic.Size = new Size(186, 23);
+            tbxMusic.TabIndex = 5;
+            // 
             // btnDeleteMusic
             // 
             btnDeleteMusic.Location = new Point(6, 547);
@@ -60,6 +69,7 @@
             btnDeleteMusic.TabIndex = 4;
             btnDeleteMusic.Text = "Delete A Music!";
             btnDeleteMusic.UseVisualStyleBackColor = true;
+            btnDeleteMusic.Click += btnDeleteMusic_Click;
             // 
             // btnAddMusic
             // 
@@ -69,14 +79,7 @@
             btnAddMusic.TabIndex = 3;
             btnAddMusic.Text = "Add";
             btnAddMusic.UseVisualStyleBackColor = true;
-            // 
-            // cbxMusics
-            // 
-            cbxMusics.FormattingEnabled = true;
-            cbxMusics.Location = new Point(127, 28);
-            cbxMusics.Name = "cbxMusics";
-            cbxMusics.Size = new Size(165, 23);
-            cbxMusics.TabIndex = 2;
+            btnAddMusic.Click += btnAddMusic_Click;
             // 
             // lblAddMusic
             // 
@@ -96,15 +99,37 @@
             dgwMusics.Size = new Size(379, 482);
             dgwMusics.TabIndex = 0;
             // 
+            // lbxRndMusicList
+            // 
+            lbxRndMusicList.FormattingEnabled = true;
+            lbxRndMusicList.ItemHeight = 15;
+            lbxRndMusicList.Location = new Point(803, 75);
+            lbxRndMusicList.Name = "lbxRndMusicList";
+            lbxRndMusicList.Size = new Size(323, 484);
+            lbxRndMusicList.TabIndex = 10;
+            // 
+            // btnRndMusic
+            // 
+            btnRndMusic.Location = new Point(412, 71);
+            btnRndMusic.Name = "btnRndMusic";
+            btnRndMusic.Size = new Size(385, 482);
+            btnRndMusic.TabIndex = 9;
+            btnRndMusic.Text = "Random Music";
+            btnRndMusic.UseVisualStyleBackColor = true;
+            btnRndMusic.Click += btnRndMusic_Click;
+            // 
             // frmMusic
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(438, 621);
+            ClientSize = new Size(1133, 621);
+            Controls.Add(lbxRndMusicList);
+            Controls.Add(btnRndMusic);
             Controls.Add(gbxMusic);
             Name = "frmMusic";
             Text = "Music";
             FormClosing += frmMusic_FormClosing;
+            Load += frmMusic_Load;
             gbxMusic.ResumeLayout(false);
             gbxMusic.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgwMusics).EndInit();
@@ -116,8 +141,10 @@
         private GroupBox gbxMusic;
         private Button btnDeleteMusic;
         private Button btnAddMusic;
-        private ComboBox cbxMusics;
         private Label lblAddMusic;
         private DataGridView dgwMusics;
+        private TextBox tbxMusic;
+        private ListBox lbxRndMusicList;
+        private Button btnRndMusic;
     }
 }
