@@ -108,5 +108,11 @@ namespace RandomList.UI
             Random rnd = new Random();
             lbxRndCar.Items.Add(dgwCars.Rows[rnd.Next(0, dgwCars.Rows.Count)].Cells[1].Value.ToString());
         }
+
+        private void rndNum_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            lbxRndNum.Items.Add(rnd.Next(0, 50));
+        }
     }
 }
