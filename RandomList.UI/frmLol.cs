@@ -59,7 +59,7 @@ namespace RandomList.UI
         private void btnRndLol_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            lbxRndChampList.Items.Add(dgwLolChamps.Rows[rnd.Next(1, dgwLolChamps.RowCount)].Cells[1].Value.ToString());
+            lbxRndChampList.Items.Add(dgwLolChamps.Rows[rnd.Next(0, dgwLolChamps.RowCount)].Cells[1].Value.ToString());
         }
 
         private void frmLol_FormClosing(object sender, FormClosingEventArgs e)

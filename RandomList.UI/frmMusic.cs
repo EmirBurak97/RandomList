@@ -64,7 +64,7 @@ namespace RandomList.UI
         private void btnRndMusic_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            lbxRndMusicList.Items.Add(dgwMusics.Rows[rnd.Next(1,dgwMusics.Rows.Count)].Cells[1].Value.ToString());
+            lbxRndMusicList.Items.Add(dgwMusics.Rows[rnd.Next(0,dgwMusics.Rows.Count)].Cells[1].Value.ToString());
         }
     }
 }

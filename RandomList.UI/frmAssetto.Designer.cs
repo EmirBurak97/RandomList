@@ -28,97 +28,236 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gbxLol = new GroupBox();
-            btnDeleteChamp = new Button();
-            btnAddChamp = new Button();
-            cbxChamps = new ComboBox();
-            lblAddChamp = new Label();
-            dgwLolChamps = new DataGridView();
-            gbxLol.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgwLolChamps).BeginInit();
+            gbxAssetto = new GroupBox();
+            btnDeleteCar = new Button();
+            tbxAddCar = new TextBox();
+            btnAddCar = new Button();
+            lblCar = new Label();
+            tbxAddTrack = new TextBox();
+            dgwCars = new DataGridView();
+            btnDeleteTrack = new Button();
+            btnAddTrack = new Button();
+            lblTrack = new Label();
+            dgwTracks = new DataGridView();
+            lbxRndSpMp = new ListBox();
+            lbxRndTrack = new ListBox();
+            lbxRndCar = new ListBox();
+            btnRndMode = new Button();
+            btnRndTrack = new Button();
+            btnRndCar = new Button();
+            gbxAssetto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgwCars).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgwTracks).BeginInit();
             SuspendLayout();
             // 
-            // gbxLol
+            // gbxAssetto
             // 
-            gbxLol.Controls.Add(btnDeleteChamp);
-            gbxLol.Controls.Add(btnAddChamp);
-            gbxLol.Controls.Add(cbxChamps);
-            gbxLol.Controls.Add(lblAddChamp);
-            gbxLol.Controls.Add(dgwLolChamps);
-            gbxLol.Location = new Point(12, 12);
-            gbxLol.Name = "gbxLol";
-            gbxLol.Size = new Size(394, 597);
-            gbxLol.TabIndex = 2;
-            gbxLol.TabStop = false;
-            gbxLol.Text = "League Of Legends";
+            gbxAssetto.Controls.Add(btnDeleteCar);
+            gbxAssetto.Controls.Add(tbxAddCar);
+            gbxAssetto.Controls.Add(btnAddCar);
+            gbxAssetto.Controls.Add(lblCar);
+            gbxAssetto.Controls.Add(tbxAddTrack);
+            gbxAssetto.Controls.Add(dgwCars);
+            gbxAssetto.Controls.Add(btnDeleteTrack);
+            gbxAssetto.Controls.Add(btnAddTrack);
+            gbxAssetto.Controls.Add(lblTrack);
+            gbxAssetto.Controls.Add(dgwTracks);
+            gbxAssetto.Location = new Point(12, 12);
+            gbxAssetto.Name = "gbxAssetto";
+            gbxAssetto.Size = new Size(431, 597);
+            gbxAssetto.TabIndex = 2;
+            gbxAssetto.TabStop = false;
+            gbxAssetto.Text = "Assetto Corsa";
             // 
-            // btnDeleteChamp
+            // btnDeleteCar
             // 
-            btnDeleteChamp.Location = new Point(6, 547);
-            btnDeleteChamp.Name = "btnDeleteChamp";
-            btnDeleteChamp.Size = new Size(379, 42);
-            btnDeleteChamp.TabIndex = 4;
-            btnDeleteChamp.Text = "Delete A Champ!";
-            btnDeleteChamp.UseVisualStyleBackColor = true;
+            btnDeleteCar.Location = new Point(217, 547);
+            btnDeleteCar.Name = "btnDeleteCar";
+            btnDeleteCar.Size = new Size(205, 42);
+            btnDeleteCar.TabIndex = 10;
+            btnDeleteCar.Text = "Delete A Car!";
+            btnDeleteCar.UseVisualStyleBackColor = true;
+            btnDeleteCar.Click += btnDeleteCar_Click;
             // 
-            // btnAddChamp
+            // tbxAddCar
             // 
-            btnAddChamp.Location = new Point(317, 24);
-            btnAddChamp.Name = "btnAddChamp";
-            btnAddChamp.Size = new Size(68, 29);
-            btnAddChamp.TabIndex = 3;
-            btnAddChamp.Text = "Add";
-            btnAddChamp.UseVisualStyleBackColor = true;
+            tbxAddCar.Location = new Point(65, 63);
+            tbxAddCar.Name = "tbxAddCar";
+            tbxAddCar.Size = new Size(238, 23);
+            tbxAddCar.TabIndex = 9;
             // 
-            // cbxChamps
+            // btnAddCar
             // 
-            cbxChamps.FormattingEnabled = true;
-            cbxChamps.Items.AddRange(new object[] { "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie", "Aphelios", "Ashe", "Aurelion Sol", "Azir", "Bard", "Bel'Veth", "Blitzcrank", "Brand", "Braum", "Caitlyn", "Camille", "Cassiopeia", "Cho'Gath", "Corki", "Darius", "Diana", "Dr. Mundo", "Draven", "Ekko", "Elise", "Evelynn", "Ezreal", "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", "Gnar", "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Illaoi", "Irelia", "Ivern", "Janna", "Jarvan IV", "Jax", "Jayce", "Jhin", "Jinx", "K'Sante", "Kai'Sa", "Kalista", "Karma", "Karthus", "Kassadin", "Katarina", "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", "Kled", "Kog'Maw", "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra", "Lucian", "Lulu", "Lux", "Malphite", "Malzahar", "Maokai", "Master Yi", "Miss Fortune", "Mordekaiser", "Morgana", "Nami", "Nasus", "Nautilus", "Neeko", "Nidalee", "Nilah", "Nocturne", "Nunu ve Willump", "Olaf", "Orianna", "Ornn", "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai", "Rell", "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Samira", "Sejuani", "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Sivir", "Skarner", "Sona", "Soraka", "Swain", "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon", "Taric", "Teemo", "Thresh", "Tristana", "Trundle", "Tryndamare", "Twisted Fate", "Twitch", "Udyr", "Urgot", "Varus", "Vayne", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", "Viktor", "Vladimir", "Volibear", "Warwick", "Wukong", "Xayah", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", "Yuumi", "Zac", "Zed", "Zeri", "Ziggs", "Zilean", "Zoe", "Zyra", "", "", "" });
-            cbxChamps.Location = new Point(127, 28);
-            cbxChamps.Name = "cbxChamps";
-            cbxChamps.Size = new Size(165, 23);
-            cbxChamps.TabIndex = 2;
+            btnAddCar.Location = new Point(309, 59);
+            btnAddCar.Name = "btnAddCar";
+            btnAddCar.Size = new Size(113, 29);
+            btnAddCar.TabIndex = 8;
+            btnAddCar.Text = "Add Car";
+            btnAddCar.UseVisualStyleBackColor = true;
+            btnAddCar.Click += btnAddCar_Click;
             // 
-            // lblAddChamp
+            // lblCar
             // 
-            lblAddChamp.AutoSize = true;
-            lblAddChamp.Location = new Point(15, 31);
-            lblAddChamp.Name = "lblAddChamp";
-            lblAddChamp.Size = new Size(106, 15);
-            lblAddChamp.TabIndex = 1;
-            lblAddChamp.Text = "Add a Champion : ";
+            lblCar.AutoSize = true;
+            lblCar.Location = new Point(16, 66);
+            lblCar.Name = "lblCar";
+            lblCar.Size = new Size(34, 15);
+            lblCar.TabIndex = 7;
+            lblCar.Text = "Car : ";
             // 
-            // dgwLolChamps
+            // tbxAddTrack
             // 
-            dgwLolChamps.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgwLolChamps.Location = new Point(6, 59);
-            dgwLolChamps.Name = "dgwLolChamps";
-            dgwLolChamps.RowTemplate.Height = 25;
-            dgwLolChamps.Size = new Size(379, 482);
-            dgwLolChamps.TabIndex = 0;
+            tbxAddTrack.Location = new Point(65, 22);
+            tbxAddTrack.Name = "tbxAddTrack";
+            tbxAddTrack.Size = new Size(238, 23);
+            tbxAddTrack.TabIndex = 6;
+            // 
+            // dgwCars
+            // 
+            dgwCars.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwCars.Location = new Point(217, 127);
+            dgwCars.Name = "dgwCars";
+            dgwCars.RowTemplate.Height = 25;
+            dgwCars.Size = new Size(205, 414);
+            dgwCars.TabIndex = 5;
+            // 
+            // btnDeleteTrack
+            // 
+            btnDeleteTrack.Location = new Point(6, 547);
+            btnDeleteTrack.Name = "btnDeleteTrack";
+            btnDeleteTrack.Size = new Size(205, 42);
+            btnDeleteTrack.TabIndex = 4;
+            btnDeleteTrack.Text = "Delete A Track!";
+            btnDeleteTrack.UseVisualStyleBackColor = true;
+            btnDeleteTrack.Click += btnDeleteTrack_Click;
+            // 
+            // btnAddTrack
+            // 
+            btnAddTrack.Location = new Point(309, 18);
+            btnAddTrack.Name = "btnAddTrack";
+            btnAddTrack.Size = new Size(113, 29);
+            btnAddTrack.TabIndex = 3;
+            btnAddTrack.Text = "Add Track";
+            btnAddTrack.UseVisualStyleBackColor = true;
+            btnAddTrack.Click += btnAddTrack_Click;
+            // 
+            // lblTrack
+            // 
+            lblTrack.AutoSize = true;
+            lblTrack.Location = new Point(16, 25);
+            lblTrack.Name = "lblTrack";
+            lblTrack.Size = new Size(43, 15);
+            lblTrack.TabIndex = 1;
+            lblTrack.Text = "Track : ";
+            // 
+            // dgwTracks
+            // 
+            dgwTracks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwTracks.Location = new Point(6, 127);
+            dgwTracks.Name = "dgwTracks";
+            dgwTracks.RowTemplate.Height = 25;
+            dgwTracks.Size = new Size(205, 414);
+            dgwTracks.TabIndex = 0;
+            // 
+            // lbxRndSpMp
+            // 
+            lbxRndSpMp.FormattingEnabled = true;
+            lbxRndSpMp.ItemHeight = 15;
+            lbxRndSpMp.Items.AddRange(new object[] { "Single Player", "Online" });
+            lbxRndSpMp.Location = new Point(670, 12);
+            lbxRndSpMp.Name = "lbxRndSpMp";
+            lbxRndSpMp.Size = new Size(310, 169);
+            lbxRndSpMp.TabIndex = 3;
+            // 
+            // lbxRndTrack
+            // 
+            lbxRndTrack.FormattingEnabled = true;
+            lbxRndTrack.ItemHeight = 15;
+            lbxRndTrack.Location = new Point(670, 217);
+            lbxRndTrack.Name = "lbxRndTrack";
+            lbxRndTrack.Size = new Size(310, 169);
+            lbxRndTrack.TabIndex = 4;
+            // 
+            // lbxRndCar
+            // 
+            lbxRndCar.FormattingEnabled = true;
+            lbxRndCar.ItemHeight = 15;
+            lbxRndCar.Location = new Point(681, 432);
+            lbxRndCar.Name = "lbxRndCar";
+            lbxRndCar.Size = new Size(310, 169);
+            lbxRndCar.TabIndex = 5;
+            // 
+            // btnRndMode
+            // 
+            btnRndMode.Location = new Point(449, 12);
+            btnRndMode.Name = "btnRndMode";
+            btnRndMode.Size = new Size(215, 169);
+            btnRndMode.TabIndex = 6;
+            btnRndMode.Text = "Random Mode";
+            btnRndMode.UseVisualStyleBackColor = true;
+            btnRndMode.Click += btnRndMode_Click;
+            // 
+            // btnRndTrack
+            // 
+            btnRndTrack.Location = new Point(449, 217);
+            btnRndTrack.Name = "btnRndTrack";
+            btnRndTrack.Size = new Size(215, 169);
+            btnRndTrack.TabIndex = 7;
+            btnRndTrack.Text = "Random Track";
+            btnRndTrack.UseVisualStyleBackColor = true;
+            btnRndTrack.Click += btnRndTrack_Click;
+            // 
+            // btnRndCar
+            // 
+            btnRndCar.Location = new Point(449, 432);
+            btnRndCar.Name = "btnRndCar";
+            btnRndCar.Size = new Size(215, 169);
+            btnRndCar.TabIndex = 8;
+            btnRndCar.Text = "Random Car";
+            btnRndCar.UseVisualStyleBackColor = true;
+            btnRndCar.Click += btnRndCar_Click;
             // 
             // frmAssetto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(992, 636);
-            Controls.Add(gbxLol);
+            Controls.Add(btnRndCar);
+            Controls.Add(btnRndTrack);
+            Controls.Add(btnRndMode);
+            Controls.Add(lbxRndCar);
+            Controls.Add(lbxRndTrack);
+            Controls.Add(lbxRndSpMp);
+            Controls.Add(gbxAssetto);
             Name = "frmAssetto";
             Text = "Assetto Corsa";
             FormClosing += frmAssetto_FormClosing;
-            gbxLol.ResumeLayout(false);
-            gbxLol.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgwLolChamps).EndInit();
+            Load += frmAssetto_Load;
+            gbxAssetto.ResumeLayout(false);
+            gbxAssetto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgwCars).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgwTracks).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox gbxLol;
-        private Button btnDeleteChamp;
-        private Button btnAddChamp;
-        private ComboBox cbxChamps;
-        private Label lblAddChamp;
-        private DataGridView dgwLolChamps;
+        private GroupBox gbxAssetto;
+        private Button btnDeleteTrack;
+        private Button btnAddTrack;
+        private Label lblTrack;
+        private DataGridView dgwTracks;
+        private DataGridView dgwCars;
+        private ListBox lbxRndSpMp;
+        private ListBox lbxRndTrack;
+        private ListBox lbxRndCar;
+        private Button btnRndMode;
+        private Button btnRndTrack;
+        private Button btnRndCar;
+        private TextBox tbxAddCar;
+        private Button btnAddCar;
+        private Label lblCar;
+        private TextBox tbxAddTrack;
+        private Button btnDeleteCar;
     }
 }

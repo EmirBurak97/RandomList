@@ -59,7 +59,7 @@ namespace RandomList.UI
         private void btnRndValo_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            lbxRndValoCharList.Items.Add(dgwChars.Rows[rnd.Next(1, dgwChars.RowCount)].Cells[1].Value.ToString());
+            lbxRndValoCharList.Items.Add(dgwChars.Rows[rnd.Next(0, dgwChars.RowCount)].Cells[1].Value.ToString());
         }
 
         private void frmValo_FormClosing(object sender, FormClosingEventArgs e)
